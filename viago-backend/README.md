@@ -6,25 +6,6 @@ This is the backend service for **ViaGo**, a cab booking platform that connects 
 
 ---
 
-## 📁 Project Structure
-viago-backend/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── viago/
-│       │           ├── controller/         # REST controllers
-│       │           ├── model/              # JPA entities
-│       │           ├── repository/         # Spring Data JPA repositories
-│       │           ├── service/            # Business logic layer
-│       │           ├── dto/                # Data transfer objects
-│       │           └── ViagoApplication.java  # Main Spring Boot class
-│       └── resources/
-│           └── application.yml             # Application configuration
-
-
----
-
 ## ✨ Features
 
 - 🚗 User registration and login (Rider & Driver roles)
