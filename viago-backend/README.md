@@ -13,14 +13,14 @@ viago-backend/
 │       ├── java/
 │       │   └── com/
 │       │       └── viago/
-│       │           ├── controller/     # REST controllers
-│       │           ├── model/          # JPA entities
-│       │           ├── repository/     # Spring Data JPA repositories
-│       │           ├── service/        # Business logic layer
-│       │           ├── dto/            # Data transfer objects
+│       │           ├── controller/         # REST controllers
+│       │           ├── model/              # JPA entities
+│       │           ├── repository/         # Spring Data JPA repositories
+│       │           ├── service/            # Business logic layer
+│       │           ├── dto/                # Data transfer objects
 │       │           └── ViagoApplication.java  # Main Spring Boot class
 │       └── resources/
-│           └── application.yml         # Application configuration
+│           └── application.yml             # Application configuration
 
 
 ---
