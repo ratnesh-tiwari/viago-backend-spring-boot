@@ -1,4 +1,6 @@
 <configuration>
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+
 
     <!-- Console Appender for dev profile -->
     <springProfile name="dev">
@@ -18,9 +20,8 @@
     <!-- File Appender for non-dev profile -->
     <springProfile name="!dev">
         <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <file>logs/app.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-                <fileNamePattern>logs/app-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <fileNamePattern>logs/application.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
                 <maxFileSize>10MB</maxFileSize>
                 <maxHistory>30</maxHistory>
                 <totalSizeCap>1GB</totalSizeCap>
@@ -31,9 +32,8 @@
         </appender>
 
         <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <file>logs/error.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-                <fileNamePattern>logs/error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <fileNamePattern>logs/error.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
                 <maxFileSize>10MB</maxFileSize>
                 <maxHistory>30</maxHistory>
                 <totalSizeCap>1GB</totalSizeCap>
@@ -49,7 +49,8 @@
             <appender-ref ref="FILE" />
         </root>
 
-        <logger name="com.viago" level="ERROR">
+        <logger name="com.viago.advices" level="ERROR">
+            <appender-ref ref="FILE" />
             <appender-ref ref="ERROR" />
         </logger>
     </springProfile>

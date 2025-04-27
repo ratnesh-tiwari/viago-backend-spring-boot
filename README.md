@@ -45,7 +45,7 @@ This is the backend service for **ViaGo**, a cab booking platform that connects 
 git clone https://github.com/yourusername/viago-backend.git
 cd viago-backend
 
-# Configure your database credentials in application.yml
+# Configure your database credentials in application.properties
 
 # Build and run the application
 mvn clean install
