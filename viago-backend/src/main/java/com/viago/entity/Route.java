@@ -1,0 +1,33 @@
+package com.viago.entity;
+
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@Data
+@Entity
+@Table(name = "routes")
+@EqualsAndHashCode(callSuper = false)
+public class Route extends Auditable {
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private int id;
+
+    @NotNull
+    @ToString.Exclude
+    @JoinColumn(name = "start_location_id")
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH})
+    private Location departure;
+
+    @NotNull
+    @ToString.Exclude
+    @JoinColumn(name = "end_location_id")
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH})
+    private Location destination;
+
+    @Column(name = "distance_in_km")
+    private  double distanceInKm;
+}
