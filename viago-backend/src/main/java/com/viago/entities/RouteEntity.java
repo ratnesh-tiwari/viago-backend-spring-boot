@@ -1,4 +1,4 @@
-package com.viago.entity;
+package com.viago.entities;
 
 
 import jakarta.persistence.*;
@@ -9,9 +9,9 @@ import lombok.ToString;
 
 @Data
 @Entity
+@EqualsAndHashCode
 @Table(name = "routes")
-@EqualsAndHashCode(callSuper = false)
-public class Route extends Auditable {
+public class RouteEntity {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private int id;
@@ -20,13 +20,13 @@ public class Route extends Auditable {
     @ToString.Exclude
     @JoinColumn(name = "start_location_id")
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH})
-    private Location departure;
+    private LocationEntity departure;
 
     @NotNull
     @ToString.Exclude
     @JoinColumn(name = "end_location_id")
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH})
-    private Location destination;
+    private LocationEntity destination;
 
     @Column(name = "distance_in_km")
     private  double distanceInKm;
