@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 public class LocationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private long id;
 
     @Column(name = "address")
     private String address;

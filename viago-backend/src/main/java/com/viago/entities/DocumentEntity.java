@@ -29,5 +29,5 @@ public class DocumentEntity {
     @ToString.Exclude
     @JoinColumn(name = "captain_id")
     @ManyToOne(fetch = FetchType.LAZY)
-    private CaptainEntity captainEntity;
+    private CaptainEntity captain;
 }

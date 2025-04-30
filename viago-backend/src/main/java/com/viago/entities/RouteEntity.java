@@ -14,7 +14,7 @@ import lombok.ToString;
 public class RouteEntity {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @NotNull
     @ToString.Exclude
