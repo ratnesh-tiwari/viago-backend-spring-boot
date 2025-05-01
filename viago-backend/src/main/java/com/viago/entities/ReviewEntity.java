@@ -9,10 +9,12 @@ import lombok.ToString;
 @Entity
 @EqualsAndHashCode
 @Table(name = "reviews")
-public class ReviewEntity {
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class ReviewEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
     private long id;
 
     @ToString.Exclude
