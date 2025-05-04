@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDateTime;
 
-public interface WorkingHoursRepository extends JpaRepository<WorkingHoursEntity, Long>, JpaSpecificationExecutor<WorkingHoursEntity> {
+public interface WorkingHoursRepository extends JpaRepository<WorkingHoursEntity, Long> {
     Page<WorkingHoursEntity> findAllByCaptainId(@Param("id") long id, Pageable pageable);
     Page<WorkingHoursEntity> findAllByCaptainIdAndShiftStartIsAfterAndShiftEndIsBefore(@Param("id") long id, @Param("from")LocalDateTime start
             , @Param("to") LocalDateTime to, Pageable pageable);
