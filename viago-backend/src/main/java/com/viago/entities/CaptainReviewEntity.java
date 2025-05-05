@@ -9,7 +9,7 @@ import lombok.ToString;
 @Entity
 @Table(name = "captain_reviews")
 @EqualsAndHashCode(callSuper = true)
-public class CaptainReviewRequestEntity extends ReviewEntity {
+public class CaptainReviewEntity extends ReviewEntity {
 
     @ToString.Exclude
     @JoinColumn(name = "captain_id")

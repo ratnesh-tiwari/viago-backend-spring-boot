@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @EqualsAndHashCode
 @Table(name = "driver_edit_requests")
-public class DriverEditRequestEntity {
+public class CaptainEditRequestEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
