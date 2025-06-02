@@ -6,14 +6,14 @@ import lombok.Data;
 
 @Data
 public class ChangePasswordBean {
-    @Pattern(regexp = "^(?=.*\\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$", message = "Password must be 8–15 characters long, include at least one uppercase letter and one number, and use only letters, digits, and @, #, $, ^, +, =.\n")
-    @NotBlank(message = "New Password is a required field")
+    @NotBlank(message = "{required}")
+    @Pattern(regexp = "^(?=.*\\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$", message = "{format}")
     private String newPassword;
-    @NotBlank(message = "Old Password is a required field")
-    @Pattern(regexp = "^(?=.*\\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$", message = "Password must be 8–15 characters long, include at least one uppercase letter and one number, and use only letters, digits, and @, #, $, ^, +, =.\n")
+    @NotBlank(message = "{required}")
+    @Pattern(regexp = "^(?=.*\\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$", message = "{format}")
     private String oldPassword;
-    @NotBlank(message = "Confirm Old Password is a required field")
-    @Pattern(regexp = "^(?=.*\\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$", message = "Password must be 8–15 characters long, include at least one uppercase letter and one number, and use only letters, digits, and @, #, $, ^, +, =.\n")
+    @NotBlank(message = "{required}")
+    @Pattern(regexp = "^(?=.*\\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$", message = "{format}")
     private String confirmOldPassword;
 
     public boolean isOldConfirmPasswordEqual() {
