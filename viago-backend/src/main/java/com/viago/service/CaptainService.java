@@ -1,4 +1,4 @@
 package com.viago.service;
 
-public interface DriverService {
+public interface CaptainService {
 }

@@ -1,4 +1,4 @@
 package com.viago.service;
 
-public interface PanicService {
+public interface EmergencyService {
 }

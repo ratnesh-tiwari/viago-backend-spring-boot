@@ -1,4 +1,4 @@
 package com.viago.service;
 
-public class LocationService {
+public interface LocationService {
 }
