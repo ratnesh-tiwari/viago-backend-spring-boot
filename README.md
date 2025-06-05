@@ -42,7 +42,7 @@ This is the backend service for **ViaGo**, a cab booking platform that connects 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/viago-backend.git
+git clone https://github.com/ratnesh-tiwari/viago-backend-spring-boot.git
 cd viago-backend
 
 # Configure your database credentials in application.properties
